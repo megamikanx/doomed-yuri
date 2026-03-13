@@ -3,7 +3,7 @@
 2026 S1 game jam project built with Ren'Py.
 
 ## About
-Insert game description here.
+Live out your harem dreams with four girls chasing after you. It's not like they like you or anything.
 
 **Theme:** Ecosystem
 **Platform:** PC / Mac  
@@ -11,13 +11,6 @@ Insert game description here.
 
 ## Premise
 You play with elements of nature, literally.
-
-## Features
-- Branching dialogue and choices
-- Multiple endings
-- Original character art and UI
-- Original soundtrack / sound design
-- [Any extra feature]
 
 ## How to Run
 1. Install Ren'Py
