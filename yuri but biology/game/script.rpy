@@ -1,1 +1,6 @@
 ﻿
+
+
+
+label start:
+    jump phone

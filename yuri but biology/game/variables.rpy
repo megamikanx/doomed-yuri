@@ -1,4 +1,4 @@
-DEFAULT_AFFECTION = 0
+default DEFAULT_AFFECTION = 0
 
 default player_name = "???"
 default player_name_revealed = False
@@ -10,7 +10,7 @@ default plant_affection = DEFAULT_AFFECTION
 default fungus_affection = DEFAULT_AFFECTION
 
 # Day and timeslot tracking
-timeslots = ["Dawn", "Morning", "Afternoon", "After Hours", "Night"]
+default timeslots = ["Dawn", "Morning", "Afternoon", "After Hours", "Night"]
 
 default day = 1
 default curr_timeslot_idx = 0
@@ -50,7 +50,7 @@ default plant_flag = False
 default fungus_flag = False
 
 # Fungus locations
-locations = ["Classroom", "Library", "Courtyard", "Cafeteria"]
+default locations = ["Classroom", "Library", "Courtyard", "Cafeteria"]
 default where_fungus = "Classroom"
 
 
