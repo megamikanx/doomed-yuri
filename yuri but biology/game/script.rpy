@@ -1,4 +1,4 @@
-﻿label start:
-    call event_plant
+label start:
+    call intro
     "Event finished."
     return
