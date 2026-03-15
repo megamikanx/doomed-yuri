@@ -3,4 +3,4 @@
 
 
 label start:
-    jump phone
+    jump intro

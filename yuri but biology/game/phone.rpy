@@ -1,5 +1,26 @@
 
-default NOTI_HEIGHT = 100
+define all_phone_text = [
+    #carnivore
+    ["Rise and shine dweeb",
+    "Yo did you do the homework, I’m kinda fucked",
+    "D",
+    ""],
+    #herbivore
+    ["Good morning [player_name]-kun, can’t wait to meet you today at school smile emoji",
+    "Look, [player_name]-kun, a beautiful flower bloomed in our classroom (flower emoji)\nI always take care of it after school~",
+    "Excited for tomorrow!",
+    ""],
+    #plant
+    ["Hey [player_name]-kun hows catching up going, I’m done with my work so … m-maybe … I c-can help you if you need… I’m free in the morning if you’d like…(>⩊<)",
+    "Have a g-good morning (˵ •̀ ᴗ - ˵ )",
+    "Come to school",
+    ""],
+    #fungus
+    ["play this roblox game w me \nfnaf eternal nights",
+    "*reel*\nim crine bruh 😭\nlook at this dancing cat\nwhat does it even do",
+    "yuh william afton spotted in theaters",
+    ""],
+]
 
 screen phone_text_noti:
     modal True
@@ -9,29 +30,30 @@ screen phone_text_noti:
         ypos 100
         imagebutton:
             idle "/gui/tile.png"
-            action [Hide("phone_text_noti"), Function(choose_text, carnivore), Show("phone_text")]
+            action [Hide("phone_text_noti"), Function(choose_text, 0), Show("phone_text")]
         imagebutton:
             idle "/gui/tile.png"
-            action [Hide("phone_text_noti"), Function(choose_text, herbivore), Show("phone_text")]
+            action [Hide("phone_text_noti"), Function(choose_text, 1), Show("phone_text")]
         imagebutton:
             idle "/gui/tile.png"
-            action [Hide("phone_text_noti"), Function(choose_text, plant), Show("phone_text")]
+            action [Hide("phone_text_noti"), Function(choose_text, 2), Show("phone_text")]
         imagebutton:
             idle "/gui/tile.png"
-            action [Hide("phone_text_noti"), Function(choose_text, fungus), Show("phone_text")]
+            action [Hide("phone_text_noti"), Function(choose_text, 3), Show("phone_text")]
 
     vbox:
         xpos 1000
         ypos 100
         spacing 61
-        #zoom 1 is 100
-        text "cow":
+        # if no varabiles in first part of strings for dialogue this works
+        # if string "[player_name]" then error will occur 
+        text " ".join(all_phone_text[0][day - 1].split()[0:2]) + "...":
             color "#000000" yanchor(0.5) xpos 15 ypos 50
-        text "meoe":
+        text " ".join(all_phone_text[1][day - 1].split()[0:2]) + "...":
             color "#000000" yanchor(0.5) xpos 15 ypos 50
-        text "meoe":
+        text " ".join(all_phone_text[2][day - 1].split()[0:2]) + "...":
             color "#000000" yanchor(0.5) xpos 15 ypos 50
-        text "meoe":
+        text " ".join(all_phone_text[3][day - 1].split()[0:2]) + "...":
             color "#000000" yanchor(0.5) xpos 15 ypos 50
 
 
@@ -62,9 +84,6 @@ screen phone_text:
 
     text phone_text:
         yanchor(1.0) color "#ffffff" xpos 1010 ypos 800 size 24
-    
-
-
 
 
 label phone:
@@ -80,12 +99,9 @@ label phone:
 
 
 
-
-
-
 init python:
 
-    def choose_text(character):
-        store.phone_text = "Monka dumbass bitch\n Illsee you in hell\n crazy racist\n dumbass"
-        store.height_text = phone_text.count("\n") + 1
+    def choose_text(ch):
+        store.phone_text = store.all_phone_text[ch][store.day - 1]
+        store.height_text = store.phone_text.count("\n") + 1
         

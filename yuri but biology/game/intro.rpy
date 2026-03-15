@@ -24,6 +24,7 @@ label name_loop:
         "No":
             jump name_loop
 
+    jump phone
     return
 
     
