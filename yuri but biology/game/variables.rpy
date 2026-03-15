@@ -1,16 +1,14 @@
-default DEFAULT_AFFECTION = 0
-
 default player_name = "???"
 default player_name_revealed = False
 
 # Affection points 
-default carnivore_affection = DEFAULT_AFFECTION
-default herbivore_affection = DEFAULT_AFFECTION
-default plant_affection = DEFAULT_AFFECTION
-default fungus_affection = DEFAULT_AFFECTION
+default carnivore_affection = 0
+default herbivore_affection = 0
+default plant_affection = 0
+default fungus_affection = 0
 
 # Day and timeslot tracking
-default timeslots = ["Dawn", "Morning", "Afternoon", "After Hours", "Night"]
+define timeslots = ["Dawn", "Morning", "Afternoon", "After Hours", "Night"]
 
 default day = 1
 default curr_timeslot_idx = 0
@@ -41,16 +39,26 @@ default trigger_bad_ending = False # for bad endings
 default trigger_good_ending = False
 default trigger_best_ending = False
 
-# Events
+# Event guards
 default chocolate_given = False
 
-default carnivore_flag = False
-default herbivore_flag = False
-default plant_flag = False
-default fungus_flag = False
+default carnivore_event_done = False
+default hamster_story = False
+
+default herbivore_event_done = False
+default racism = False
+
+default plant_event_done = False
+default freaky = True
+
+default fungus_event_done= False
 
 # Fungus locations
+<<<<<<< HEAD
 default locations = ["Classroom", "Library", "Courtyard", "Cafeteria"]
+=======
+define locations = ["Classroom", "Library", "Courtyard", "Cafeteria"]
+>>>>>>> 0a8cea45eb570bdd03ac91f4909bb54ca245bb84
 default where_fungus = "Classroom"
 
 
