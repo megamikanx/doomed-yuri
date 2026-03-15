@@ -41,6 +41,8 @@ label event_plant:
 
     player_thoughts "A fly...? Well that's annoying."
 
+    window hide
+
     show plant eat at center
     show screen eating_caption("Mmf...")
 
@@ -52,6 +54,8 @@ label event_plant:
     hide screen eating_caption
 
     show plant surprise at center
+
+    window show
 
     plant "S-S-Sorry!!!! I-I didn't mean to..."
 

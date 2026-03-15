@@ -1,4 +1,4 @@
 ﻿label start:
-    call event_plant
+    call event_fungus
     "Event finished."
     return

@@ -52,6 +52,7 @@ default plant_event_done = False
 default freaky = True
 
 default fungus_event_done= False
+default celebrate_differences = False
 
 # Fungus locations
 define locations = ["Classroom", "Library", "Courtyard", "Cafeteria"]
