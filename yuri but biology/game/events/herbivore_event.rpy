@@ -118,4 +118,5 @@ label event_herbivore:
 
     hide herbivore shy with dissolve
 
+    jump plan
     return
