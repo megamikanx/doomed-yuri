@@ -11,7 +11,7 @@ default fungus_affection = 0
 define timeslots = ["dawn", "morning", "afternoon", "afterhours", "night"]
 
 default day = 1
-default curr_timeslot_idx = 0
+default curr_timeslot_idx = -1
 define schedule = ["","",""]
 
 # Free time dialogue tracker
@@ -56,7 +56,8 @@ default fungus_event_done= False
 
 # Fungus locations
 define locations = ["Classroom", "Library", "Courtyard", "Cafeteria"]
-default where_fungus = "Classroom"
+# empty if in courtyard
+define where_fungus = ["", "classroom", "cafeteria", "library", ""]
 
 
 

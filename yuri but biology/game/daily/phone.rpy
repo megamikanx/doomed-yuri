@@ -54,14 +54,15 @@ screen phone_text_noti:
         ypos 100
         spacing 50
         # if no varabiles in first part of strings for dialogue this works
+        # day 1 we have no texts so day 0 is day 2
         # if string "[player_name]" then error will occur 
-        text " ".join(all_phone_text[0][day - 1].split()[0:2]) + "...":
+        text " ".join(all_phone_text[0][day - 2].split()[0:2]) + "...":
             color "#000000" yanchor(0.5) xpos 15 ypos 50
-        text " ".join(all_phone_text[1][day - 1].split()[0:2]) + "...":
+        text " ".join(all_phone_text[1][day - 2].split()[0:2]) + "...":
             color "#000000" yanchor(0.5) xpos 15 ypos 50
-        text " ".join(all_phone_text[2][day - 1].split()[0:2]) + "...":
+        text " ".join(all_phone_text[2][day - 2].split()[0:2]) + "...":
             color "#000000" yanchor(0.5) xpos 15 ypos 50
-        text " ".join(all_phone_text[3][day - 1].split()[0:2]) + "...":
+        text " ".join(all_phone_text[3][day - 2].split()[0:2]) + "...":
             color "#000000" yanchor(0.5) xpos 15 ypos 50
 
 default phone_time_temp = 0
@@ -69,12 +70,13 @@ default phone_time_temp = 0
 screen phone_timezone:
     modal True
 
-    imagebutton:
-        xpos 100
-        ypos 100
-        idle "/gui/back.png"
+    if day != 1:
+        imagebutton:
+            xpos 100
+            ypos 100
+            idle "/gui/back.png"
 
-        action [Hide("phone_timezone"), Show("phone_text_noti")]
+            action [Hide("phone_timezone"), Show("phone_text_noti")]
 
     vbox:
         xpos 1000
@@ -178,19 +180,22 @@ label phone:
     scene iphone_tempremove:
         align (0.5, 0.5)
 
-    show screen phone_timezone
+    if day == 1:
+        show screen phone_timezone
+    else:
+        show screen phone_text_noti
 
     window hide
     pause
 
 label phone_end:
-    $print(phone_time_temp)
     jump plan
 
 
 init python:
 
     def choose_text(ch):
-        store.phone_text = store.all_phone_text[ch][store.day - 1]
+        # as two day offset
+        store.phone_text = store.all_phone_text[ch][store.day - 2]
         store.height_text = store.phone_text.count("\n") + 1
         

@@ -84,4 +84,5 @@ label event_carnivore:
 
     hide carnivore with dissolve
 
+    jump plan
     return
