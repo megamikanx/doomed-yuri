@@ -25,6 +25,14 @@ define all_phone_text = [
 screen phone_text_noti:
     modal True
 
+    imagebutton:
+        xpos 100
+        ypos 100
+        idle "/gui/back.png"
+        at Transform(xzoom = -1.0)
+
+        action [Hide("phone_text_noti"), Show("phone_timezone")]
+
     vbox:
         xpos 1000
         ypos 100
@@ -44,7 +52,7 @@ screen phone_text_noti:
     vbox:
         xpos 1000
         ypos 100
-        spacing 61
+        spacing 50
         # if no varabiles in first part of strings for dialogue this works
         # if string "[player_name]" then error will occur 
         text " ".join(all_phone_text[0][day - 1].split()[0:2]) + "...":
@@ -56,7 +64,84 @@ screen phone_text_noti:
         text " ".join(all_phone_text[3][day - 1].split()[0:2]) + "...":
             color "#000000" yanchor(0.5) xpos 15 ypos 50
 
+default phone_time_temp = 0
 
+screen phone_timezone:
+    modal True
+
+    imagebutton:
+        xpos 100
+        ypos 100
+        idle "/gui/back.png"
+
+        action [Hide("phone_timezone"), Show("phone_text_noti")]
+
+    vbox:
+        xpos 1000
+        ypos 100
+        imagebutton:
+            idle "/gui/tile.png"
+            action [Hide("phone_timezone"), SetVariable("phone_time_temp", 0),  Show("phone_choose_character")]
+        imagebutton:
+            idle "/gui/tile.png"
+            action [Hide("phone_timezone"), SetVariable("phone_time_temp", 1), Show("phone_choose_character")]
+        imagebutton:
+            idle "/gui/tile.png"
+            action [Hide("phone_timezone"), SetVariable("phone_time_temp", 2), Show("phone_choose_character")]
+
+    vbox:
+        xpos 1000
+        ypos 100
+        spacing 50
+        # if no varabiles in first part of strings for dialogue this works
+        # if string "[player_name]" then error will occur 
+        text "Morining":
+            color "#000000" yanchor(0.5) xpos 15 ypos 50
+        text "Afternoon":
+            color "#000000" yanchor(0.5) xpos 15 ypos 50
+        text "After Hours":
+            color "#000000" yanchor(0.5) xpos 15 ypos 50
+
+screen phone_choose_character:
+    modal True
+
+    imagebutton:
+        xpos 100
+        ypos 100
+        idle "/gui/back.png"
+
+        action [Hide("phone_choose_character"), Show("phone_timezone")]
+
+    vbox:
+        xpos 1000
+        ypos 100
+        imagebutton:
+            idle "/gui/tile.png"
+            action [Hide("phone_choose_character"), SetDict(schedule, phone_time_temp, "carnivore"), Jump("phone_end")]
+        imagebutton:
+            idle "/gui/tile.png"
+            action [Hide("phone_choose_character"), SetDict(schedule, phone_time_temp, "herbivore"), Jump("phone_end")]
+        imagebutton:
+            idle "/gui/tile.png"
+            action [Hide("phone_choose_character"), SetDict(schedule, phone_time_temp, "plant"), Jump("phone_end")]
+        imagebutton:
+            idle "/gui/tile.png"
+            action [Hide("phone_choose_character"), SetDict(schedule, phone_time_temp, "fungus"), Jump("phone_end")]
+
+    vbox:
+        xpos 1000
+        ypos 100
+        spacing 50
+        # if no varabiles in first part of strings for dialogue this works
+        # if string "[player_name]" then error will occur 
+        text "Carnivore-chan":
+            color "#000000" yanchor(0.5) xpos 15 ypos 50
+        text "Herbivore-chan":
+            color "#000000" yanchor(0.5) xpos 15 ypos 50
+        text "Plant-chan":
+            color "#000000" yanchor(0.5) xpos 15 ypos 50
+        text "Fungus-chan":
+            color "#000000" yanchor(0.5) xpos 15 ypos 50
 
 
 define phone_text = ""
@@ -93,12 +178,14 @@ label phone:
     scene iphone_tempremove:
         align (0.5, 0.5)
 
-    show screen phone_text_noti
-
+    show screen phone_timezone
 
     window hide
     pause
 
+label phone_end:
+    $print(phone_time_temp)
+    jump plan
 
 
 init python:

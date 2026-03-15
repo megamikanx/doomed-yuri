@@ -8,10 +8,11 @@ default plant_affection = 0
 default fungus_affection = 0
 
 # Day and timeslot tracking
-define timeslots = ["Dawn", "Morning", "Afternoon", "After Hours", "Night"]
+define timeslots = ["dawn", "morning", "afternoon", "afterhours", "night"]
 
 default day = 1
 default curr_timeslot_idx = 0
+define schedule = ["","",""]
 
 # Free time dialogue tracker
 default freetime_index = {

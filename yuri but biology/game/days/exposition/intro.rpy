@@ -88,6 +88,8 @@ label name_loop:
 
     player "{i}I’ll have free time throughout the day…{w=0.5} I should decide on my schedule.{/i}"
 
+    jump phone
+
     return
 
     
