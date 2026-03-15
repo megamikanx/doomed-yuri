@@ -1,4 +1,5 @@
-﻿label start:
-    call event_fungus
+
+label start:
+    call intro
     "Event finished."
     return
