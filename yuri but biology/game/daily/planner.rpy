@@ -3,6 +3,7 @@
 # dont need if this label is needed could be conslidated
 
 label plan:
+    "accessed plan"
     $ go_next()
 
     pause
@@ -16,6 +17,7 @@ init python:
         if store.curr_timeslot_idx == 3:
             store.day += 1
             store.curr_timeslot_idx = -1
+            store.schedule = ["","",""]
             renpy.jump("phone")
 
 

@@ -112,5 +112,3 @@ label event_plant:
     hide plant shy with dissolve
 
     jump plan
-    
-    return

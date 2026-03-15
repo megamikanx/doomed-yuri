@@ -133,5 +133,6 @@ label event_fungus:
 
     hide fungus with dissolve
 
+    jump plan
     return
 
