@@ -57,6 +57,8 @@ screen phone_text_noti:
             color "#000000" yanchor(0.5) xpos 15 ypos 50
 
 
+
+
 define phone_text = ""
 define height_text = 0
 

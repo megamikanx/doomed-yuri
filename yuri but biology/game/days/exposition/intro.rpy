@@ -41,7 +41,7 @@ label name_loop:
         "No":
             jump name_loop
 
-    jump phone
+    herbivore "Have a seat wherever, {w} I’ll introduce you to your class-"
     return
 
     

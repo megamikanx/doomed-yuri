@@ -54,11 +54,7 @@ default freaky = True
 default fungus_event_done= False
 
 # Fungus locations
-<<<<<<< HEAD
-default locations = ["Classroom", "Library", "Courtyard", "Cafeteria"]
-=======
 define locations = ["Classroom", "Library", "Courtyard", "Cafeteria"]
->>>>>>> 0a8cea45eb570bdd03ac91f4909bb54ca245bb84
 default where_fungus = "Classroom"
 
 
