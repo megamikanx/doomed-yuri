@@ -289,48 +289,67 @@ style quick_button_text:
 
 screen navigation():
 
-    vbox:
-        style_prefix "navigation"
+    if main_menu:
+        vbox:
+            imagebutton:
+                idle "/gui/start_button.png"
+                hover "/gui/start_button_dimmed.png"
+                action Start()
+                ypos 705
+                xpos 45
+            imagebutton:
+                idle "/gui/quit_button.png"
+                hover "/gui/quit_button_dimmed.png"
+                action Quit(confirm=not main_menu)
+                ypos 750
+                xpos 45
+            
 
-        xpos gui.navigation_xpos
-        yalign 0.5
 
-        spacing gui.navigation_spacing
+    # has redundant code as i cheated this creation
+    else:
+        vbox:
+            style_prefix "navigation"
 
-        if main_menu:
+            xpos gui.navigation_xpos
+            yalign 0.5
 
-            textbutton _("Start") action Start()
+            spacing gui.navigation_spacing
 
-        else:
+            if main_menu:
 
-            textbutton _("History") action ShowMenu("history")
+                textbutton _("Start") action Start()
 
-            textbutton _("Save") action ShowMenu("save")
+            else:
 
-        textbutton _("Load") action ShowMenu("load")
+                textbutton _("History") action ShowMenu("history")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+                textbutton _("Save") action ShowMenu("save")
 
-        if _in_replay:
+            textbutton _("Load") action ShowMenu("load")
 
-            textbutton _("End Replay") action EndReplay(confirm=True)
+            textbutton _("Preferences") action ShowMenu("preferences")
 
-        elif not main_menu:
+            if _in_replay:
 
-            textbutton _("Main Menu") action MainMenu()
+                textbutton _("End Replay") action EndReplay(confirm=True)
 
-        textbutton _("About") action ShowMenu("about")
+            elif not main_menu:
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+                textbutton _("Main Menu") action MainMenu()
 
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            textbutton _("About") action ShowMenu("about")
 
-        if renpy.variant("pc"):
+            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
-            ## The quit button is banned on iOS and unnecessary on Android and
-            ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+                ## Help isn't necessary or relevant to mobile devices.
+                textbutton _("Help") action ShowMenu("help")
+
+            if renpy.variant("pc"):
+
+                ## The quit button is banned on iOS and unnecessary on Android and
+                ## Web.
+                textbutton _("Quit") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -355,11 +374,19 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add gui.main_menu_background
+    add gui.main_menu_background:
+        zoom 0.24
+
+
+    # adds title in top left
+    #add gui.main_menu_title at right:
+        #yoffset -500
 
     ## This empty frame darkens the main menu.
-    frame:
-        style "main_menu_frame"
+    
+    # removed this may cause issues --------------------------------<<<<<<<<<<<<<<<
+    #frame:
+        #style "main_menu_frame"
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
@@ -370,8 +397,9 @@ screen main_menu():
         vbox:
             style "main_menu_vbox"
 
-            text "[config.name!t]":
-                style "main_menu_title"
+            # project name in bottom left
+            #text "[config.name!t]":
+                #style "main_menu_title"
 
             text "[config.version]":
                 style "main_menu_version"
@@ -420,7 +448,8 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
     style_prefix "game_menu"
 
     if main_menu:
-        add gui.main_menu_background
+        add gui.main_menu_background:
+            zoom 0.24
     else:
         add gui.game_menu_background
 
