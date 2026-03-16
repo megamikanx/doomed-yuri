@@ -51,16 +51,22 @@ init python:
     version = -1
 
     def call_event(character, location):
+        
+        # check that 
+        if character == last_freetime_girl:
+            renpy.show_screen("map")
+            renpy.transition(hpunch)
+            return
         # gets conversation level
-
         # timeslots includes dawn where as index starts at morning
         #get number of times this event has been called, and increases tally
         version = freetime_index[character+"_"+timeslots[store.curr_timeslot_idx + 1]]
 
         # if fungus also there let player choose to go to her
-        if where_fungus[day - 1] == location:
+        if where_fungus[day - 1] == location and not meet_fungus:
             renpy.jump("free_"+character+"_fungushere")
         
+        #if fungus not in courtyard and choose courtyard
         if where_fungus[day - 1] and character == "fungus":
             renpy.jump("free_fungus_nothere")
 
@@ -68,6 +74,7 @@ init python:
 
         # jump to event
         #may crash the game as some labels dont exist
+        store.last_freetime_girl = character
         renpy.jump("free_"+character+str(version))
         
 

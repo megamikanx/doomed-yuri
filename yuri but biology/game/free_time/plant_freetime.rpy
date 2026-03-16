@@ -6,10 +6,13 @@ label free_plant_fungushere:
     menu:
         "Both [plant] and [fungus] are here. Who do you want to talk to?{fast}"
         "[plant]":
+            $ store.last_freetime_girl = "plant"
             $ freetime_index["plant"+"_"+timeslots[store.curr_timeslot_idx + 1]] += 1
             $ renpy.jump("free_plant"+ str(freetime_index["plant"+"_"+timeslots[store.curr_timeslot_idx + 1]] - 1))
 
         "[fungus]":
+            $ meet_fungus = True
+            $ store.last_freetime_girl = "fungus"
             $ freetime_index["fungus"+"_"+timeslots[store.curr_timeslot_idx + 1]] += 1
             $ renpy.jump("free_fungus"+str(freetime_index["fungus"+"_"+timeslots[store.curr_timeslot_idx + 1]] - 1))
 

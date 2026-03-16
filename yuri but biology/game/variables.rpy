@@ -30,7 +30,8 @@ default freetime_index = {
     "carnivore_afterhours": 0,
 }
 
-default last_freetime_girl = None
+
+default last_freetime_girl = None # could be made into list to prevent event girl aswell
 
 # Ending tracker
 default home_early_count = 0 # for bitchless ending
@@ -59,6 +60,7 @@ default celebrate_differences = False
 define locations = ["Classroom", "Library", "Courtyard", "Cafeteria"]
 # empty if in courtyard
 define where_fungus = ["", "classroom", "cafeteria", "library", ""]
+define meet_fungus = False
 
 
 

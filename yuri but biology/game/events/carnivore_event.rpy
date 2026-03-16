@@ -1,4 +1,4 @@
-label event_carnivore:
+label event_carnivore1:
     if carnivore_event_done:
         return
 

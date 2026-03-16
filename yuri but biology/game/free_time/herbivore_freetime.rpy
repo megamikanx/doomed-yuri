@@ -6,10 +6,13 @@ label free_herbivore_fungushere:
     menu:
         "Both [herbivore] and [fungus] are here. Who do you want to talk to?{fast}"
         "[herbivore]":
+            $ store.last_freetime_girl = "herbivore"
             $ freetime_index["herbivore"+"_"+timeslots[store.curr_timeslot_idx + 1]] += 1
             $ renpy.jump("free_herbivore"+ str(freetime_index["herbivore"+"_"+timeslots[store.curr_timeslot_idx + 1]] - 1))
 
         "[fungus]":
+            $ meet_fungus = True
+            $ store.last_freetime_girl = "fungus"
             $ freetime_index["fungus"+"_"+timeslots[store.curr_timeslot_idx + 1]] += 1
             $ renpy.jump("free_fungus"+str(freetime_index["fungus"+"_"+timeslots[store.curr_timeslot_idx + 1]] - 1))
 
@@ -57,7 +60,7 @@ label free_herbivore1:
 
         "Looks like just a few more days":
             herbivore "I hope so!"
-            
+
         "You’re prettier than that useless flower":
             herbivore "[player]-kun...!{w=0.5} Thank you{w=1}, {cps=30}I think [player]-kun is{w=0.25} cool{/cps}{cps=15} too . . .{/cps}"
     jump plan

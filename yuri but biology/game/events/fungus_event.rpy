@@ -5,7 +5,7 @@ transform shrug:
     ease 0.08 yoffset -4
     ease 0.08 yoffset 0
 
-label event_fungus:
+label event_fungus4:
     if fungus_event_done:
         return
 
