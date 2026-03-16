@@ -1,5 +1,5 @@
 
 label start:
-    call world_end_ending
+    call map
     "Event finished."
     return
