@@ -7,7 +7,6 @@ label free_fungus_nothere:
 
 label free_fungus0:
     fungus "0"
-<<<<<<< HEAD
     scene bg_courtyard
     show fungus neutral at center
     with dissolve
@@ -29,13 +28,10 @@ label free_fungus0:
 
             player_thoughts "I should hurry back. My classmates are waiting."
 
-=======
->>>>>>> feature-tempBranch
     jump plan
 
 label free_fungus1:
     fungus "1"
-<<<<<<< HEAD
     scene bg_courtyard
     player_thoughts "Can't believe I overslept on the first week...wait...is that Fungus-chan?"
     player_thoughts "What's that in her mouth? Green...toast...?"
@@ -57,13 +53,10 @@ label free_fungus1:
 
             player_thoughts "What is she saying..."
 
-=======
->>>>>>> feature-tempBranch
     jump plan
 
 label free_fungus2:
     fungus "2"
-<<<<<<< HEAD
     scene bg_courtyard
 
     show fungus neutral at center 
@@ -96,13 +89,10 @@ label free_fungus2:
 
             player_thoughts "I guess she's into yaoi."
 
-=======
->>>>>>> feature-tempBranch
     jump plan
 
 label free_fungus3:
     fungus "3"
-<<<<<<< HEAD
     scene bg_courtyard
 
     show fungus neutral at center
@@ -150,7 +140,4 @@ label free_fungus4:
 
     
     
-=======
-    jump plan
->>>>>>> feature-tempBranch
     
