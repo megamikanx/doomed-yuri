@@ -1,6 +1,5 @@
 label herbivore_vday:
     scene bg_classroom
-    $ 
 
     show herbivore neutral with dissolve
     herbivore "Oh, [player_name]-kun!"
