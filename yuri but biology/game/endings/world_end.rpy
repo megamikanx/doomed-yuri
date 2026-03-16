@@ -4,6 +4,8 @@ label world_end_ending:
 
     $ trigger_world_end_ending = True
 
+    play sound "audio/game_bad_ending.ogg"
+
     scene world_end
 
     player_thoughts "This is what they meant when they said don't play with nature..."

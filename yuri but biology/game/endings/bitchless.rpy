@@ -4,9 +4,9 @@ label bitchless_ending:
 
     $ trigger_bitchless_ending = True
 
-    scene death_end
+    play sound "audio/game_bad_ending.ogg"
 
-    play sound "audio/game_good_ending.ogg"
+    scene death_end
 
     player_thoughts "Ah...I see this is what I get for not touching grass..."
     player_thoughts "Would Herbivore-chan have been there if I visited the classroom...?"
