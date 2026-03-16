@@ -7,6 +7,7 @@ default herbivore_affection = 0
 default plant_affection = 0
 default fungus_affection = 0
 
+
 default MAX_AFFECTION_DIFF = 4
 
 # Day and timeslot tracking
