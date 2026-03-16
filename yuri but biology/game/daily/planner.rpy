@@ -44,14 +44,14 @@ init python:
     def are_you_bitchless():
         all_affection = [carnivore_affection, herbivore_affection, plant_affection, fungus_affection]
         # need to be filled
-        return false
+        return False
         
 
     def end_game_natural():
         all_affection = [carnivore_affection, herbivore_affection, plant_affection, fungus_affection]
         
         #if max and min affection levels are too different get respective ending
-        if (max(all_affection) - min(all_affection)) > max_affection_diff:
+        if (max(all_affection) - min(all_affection)) > MAX_AFFECTION_DIFF:
             renpy.jump("world_end_ending")
         else:
             renpy.jump("good_ending")

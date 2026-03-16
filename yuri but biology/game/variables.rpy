@@ -7,7 +7,8 @@ default herbivore_affection = 0
 default plant_affection = 0
 default fungus_affection = 0
 
-default max_affection_diff = 0
+
+default MAX_AFFECTION_DIFF = 4
 
 # Day and timeslot tracking
 define timeslots = ["dawn", "morning", "afternoon", "afterhours", "night"]

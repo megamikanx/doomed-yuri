@@ -66,10 +66,10 @@ define gui.name_text_font = "gui/fonts/ToThePointRegular-n9y4.ttf"
 define gui.interface_text_font = "gui/fonts/ToThePointRegular-n9y4.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 60
+define gui.text_size = 35
 
 ## The size of character names.
-define gui.name_text_size = 65
+define gui.name_text_size = 50
 
 ## The size of text in the game's user interface.
 define gui.interface_text_size = 53
@@ -88,6 +88,7 @@ define gui.title_text_size = 95
 
 ## The images used for the main and game menus.
 define gui.main_menu_background = "gui/main_menu.png"
+define gui.main_menu_title = "gui/window_icon.png"
 define gui.game_menu_background = "gui/game_menu.png"
 
 
@@ -432,7 +433,7 @@ init python:
     def small():
 
         ## Font sizes.
-        gui.text_size = 45
+        gui.text_size = 35
         gui.name_text_size = 54
         gui.notify_text_size = 38
         gui.interface_text_size = 45

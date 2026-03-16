@@ -15,16 +15,16 @@ label intro:
 
     scene bg_classroom
 
-    show herbivore blush at center
+    show herbivore happy at center
 
     herbivore "Oh"
     herbivore "You must be the transfer student!"
 
-    show herbivore default at center
+    show herbivore neutral at center
 
     herbivore "Weird... you look awfully normal."
 
-    show herbivore blush at center
+    show herbivore happy at center
 
     herbivore "Anyways, I’m [herbivore], the class president."
     herbivore "What's your name?"
@@ -46,13 +46,13 @@ label name_loop:
         "No":
             jump name_loop
 
-    show herbivore default at center
+    show herbivore neutral at center
 
     herbivore "Have a seat wherever, {w=0.5} I’ll introduce you to the class-{w=0.35}{nw}"
 
     carnivore "{size=124}oi oi oi!"
 
-    hide herbivore blush with dissolve
+    hide herbivore happy with dissolve
 
     show carnivore happy at center with dissolve
 
@@ -76,14 +76,15 @@ label name_loop:
 
     carnivore "It's pretty boring here. [herbivore] always hangs out here.{w} What a freaking nerd."
 
-    show carnivore happy at left with move
+    show carnivore happy at Transform(xpos=300) with move
 
-    show herbivore pissed at right with dissolve
+    show herbivore sad at Transform(ypos=1080, xpos=550,yanchor= 1.0, zoom=0.95) with dissolve
 
     herbivore "Shut up Carnivore! You’re embarrassing me in front of [player]-kun! Baka baka"
 
-    hide carnivore happy with dissolve
-    hide herbivore pissed with dissolve
+    hide carnivore happy
+    hide herbivore pissed
+    with dissolve
 
     scene bg_library
 
@@ -91,11 +92,9 @@ label name_loop:
 
     carnivore "This is the library."
 
-    show carnivore neutral with dissolve
+    show carnivore angry
 
     carnivore "It’s stuffy here isn’t it?{w=1} Absolutely no space to run around at all."
-
-    show carnivore angry
 
     player "{i}The windows are positioned in a way where sunlight covers every inch of the room.{w=0.5}\n My eyes hurt.{/i}"
 
@@ -103,18 +102,18 @@ label name_loop:
 
     carnivore "[plant] likes to be here a lot.{w=1}\n{size=124}HEY!{w=0.25} You awake?"
 
-    show carnivore happy at left
-    show plant neutral at right:
+    show carnivore happy at Transform(xpos=300) with move
+    show plant neutral at Transform(ypos=1080, xpos=550,yanchor= 1.0, zoom=1.0) with dissolve:
         matrixcolor BrightnessMatrix(-0.5)
 
     plant "{size=124}Zzz.​​(-_-) zzZ"
 
-    hide plant neutral with dissolve
-
     carnivore "{size=124}LAME{w=0.5}{nw}"
     carnivore "{size=124}NEXT!!"
 
-    hide carnivore happy with dissolve
+    hide plant neutral
+    hide carnivore happy
+    with dissolve
 
     scene bg_courtyard
 
@@ -127,16 +126,16 @@ label name_loop:
 
     carnivore "Ah, I see [fungus] is in her usual spot.\n{w}Yeah I didn’t know students can just buy cigarettes. " 
 
-    show carnivore neutral at left
-    show fungus neutral at right
+    show carnivore neutral at Transform(xpos=300) with move
+    show fungus neutral at Transform(ypos=1080, xpos=550,yanchor= 1.0, zoom=0.95) with dissolve
 
     fungus "sup.{w=0.5} want one?"
 
-    show carnivore happy at left
+    show carnivore happy at Transform(xpos=300)
 
     carnivore "She’s hella weird like that.{w}\nDon’t hang out with her if you don’t want second hand lung problems."
 
-    show fungus surprise at right
+    show fungus surprise at Transform(ypos=1080, xpos=550,yanchor= 1.0, zoom=0.95)
 
     fungus "brah💀.{w=0.75}\ndont knock it till you try it carni.{w=0.75} my lungs are genuinely fine.{w=0.5} im brooding rn.{w=0.25} dont talk to me."
 
