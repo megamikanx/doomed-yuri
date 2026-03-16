@@ -1,3 +1,17 @@
+transform walk_forward_shake:
+    xoffset 0
+    yoffset 0
+    linear 0.10 yoffset -4
+    linear 0.10 yoffset 0
+    linear 0.10 yoffset -4
+    linear 0.10 yoffset 0
+    linear 0.10 yoffset -4
+    linear 0.10 yoffset 0
+
+transform slight_surprise:
+    yoffset 0
+    ease 0.05 yoffset -10
+    ease 0.08 yoffset 0
 
 label free_plant_fungushere:
     scene bg_library
@@ -101,3 +115,47 @@ label free_plant2:
     else:
         "{w=1}No ones here{cps=3}...{/cps}"
     jump plan
+
+label free_plant3:
+    scene bg_library
+
+    show plant neutral with dissolve
+    plant "..."
+    player_thought "Ah, I wonder what she's reading."
+    player_thought "I don't think she can hear me...let me just take a peak."
+
+    show layer master at walk_forward_shake
+    $ renpy.pause(0.8)
+
+    show layer master
+
+    player_thought "What's the title..."
+    player_thought "The 12-Tentacled Kraken and Bang Bang Paradise...?"
+
+    menu:
+        "Whatcha got there?":
+            show plant shy at center, slight_surprise 
+            plant "{size=+12}[player_name]-kun?!?!!"
+            plant "I...I didn't think you're in the library at this time..."
+            show plant megablush with dissolve
+            plant "U-uhm...don't worry about it!"
+            player_thought "Should I have not looked...?"
+        
+        "I like the part where he grows another tentacle.":
+            $ plant_affection += 1
+            show plant shy with dissolve
+            plant "[player_name]-kun?!"
+
+            show plant megablush with dissolve
+            plant "I didn't know you were into the Bang Bang Paradise series..."
+            plant "Th-this is the newest one! The main character is so slimy...my favorite trope."
+
+            show plant shy with dissolve
+            plant "W-w-we should talk about it in depth s-sometime...!"
+
+            player_thought "It used to be my favorite series in middle schoool...didn't know people still read the manga."
+
+    jump plan
+
+
+

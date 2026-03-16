@@ -7,7 +7,6 @@ label free_fungus_nothere:
 
 
 label free_fungus0:
-    fungus "0"
     scene bg_courtyard
     show fungus neutral at center
     with dissolve
@@ -32,7 +31,6 @@ label free_fungus0:
     jump plan
 
 label free_fungus1:
-    fungus "1"
     scene bg_courtyard
     player_thoughts "Can't believe I overslept on the first week...wait...is that Fungus-chan?"
     player_thoughts "What's that in her mouth? Green...toast...?"
@@ -57,12 +55,11 @@ label free_fungus1:
     jump plan
 
 label free_fungus2:
-    fungus "2"
     scene bg_courtyard
 
     show fungus neutral at center 
     with dissolve
-    fungus "~ ♫ ♫ ♫"
+    fungus "~🎵🎵🎵"
 
     player_thoughts "Ah...Fungus-chan is on reels again..."
     player_thoughts "Should I talk to her?"
@@ -93,7 +90,6 @@ label free_fungus2:
     jump plan
 
 label free_fungus3:
-    fungus "3"
     scene bg_courtyard
 
     show fungus neutral at center
@@ -114,7 +110,6 @@ label free_fungus3:
     jump plan
 
 label free_fungus4:
-    fungus "4"
     scene bg_courtyard
     player_thoughts "Funny seeing Fungus-chan here...she's got something in her hand."
     player_thoughts "Is that...an orange? Maybe a mandarin...?"
@@ -122,7 +117,7 @@ label free_fungus4:
     show fungus neutral at center
     with dissolve
 
-    fungus "生日快乐"
+    fungus "sheng ri kuai le"
 
     menu:
         "Sorry, I don't speak Mandarin.":
@@ -137,6 +132,8 @@ label free_fungus4:
             fungus "nvm. seeya."
 
             player_thoughts "Oh...she was having a mandarin...and speaking Mandarin...very punny."
+    
+    jump plan
 
 
     

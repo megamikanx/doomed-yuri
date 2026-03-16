@@ -19,7 +19,6 @@ label free_herbivore_fungushere:
 
 
 label free_herbivore0:
-
     scene bg_classroom
 
     if curr_timeslot_idx != 2:
@@ -57,7 +56,6 @@ label free_herbivore0:
 
 
 label free_herbivore1:
-
     scene bg_classroom
 
     show herbivore neutral at center with dissolve
@@ -120,5 +118,35 @@ label free_herbivore2:
     jump plan
 
 label free_herbivore3:
+    scene bg_classroom
 
-    herbivore "hello"
+    show herbivore neutral at center 
+    with dissolve
+
+    herbivore "Ah, [player_name]-kun! I've been expecting you, actually."
+
+    show herbivore shy with dissolve
+    herbivore "I've been wanting to show you this poem I wrote!"
+    herbivore "I haven't been this creative in a long time...but I hope you like it!"
+    herbivore "Ahem..."
+
+    show herbivore neutral with dissolve
+    herbivore "Roses are red...violets are blue..."
+    show herbivore smug with dissolve
+    herbivore "Or let me speak your language...COWS GO MOO!"
+
+    show herbivore neutral with dissolve
+    herbivore "So? What did you think?"
+
+    menu:
+        "Have you ever considered playing League?":
+            $ herbivore_affection += 1
+            herbivore "That must be a compliment, right?!"
+            show herbivore happy with dissolve
+            herbivore "Thank you, [player_name]-kun!"
+        "Ever heard of celebrating our differences?":
+            show herbivore smug with dissolve
+            herbivore "What do I expect from a normie like you..."
+    
+    jump plan
+

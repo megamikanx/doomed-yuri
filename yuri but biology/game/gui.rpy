@@ -66,7 +66,7 @@ define gui.name_text_font = "gui/fonts/ToThePointRegular-n9y4.ttf"
 define gui.interface_text_font = "gui/fonts/ToThePointRegular-n9y4.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 50
+define gui.text_size = 60
 
 ## The size of character names.
 define gui.name_text_size = 65
