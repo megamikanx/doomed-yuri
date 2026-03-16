@@ -15,7 +15,7 @@ label bitchless_ending:
     player_thoughts "...and it was all my fault."
 
     show komm susser todd with dissolve
-    player thoughts "It all...returns to nothing."
+    player_thoughts "It all...returns to nothing."
 
     return
 

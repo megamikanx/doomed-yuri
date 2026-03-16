@@ -7,6 +7,8 @@ default herbivore_affection = 0
 default plant_affection = 0
 default fungus_affection = 0
 
+default max_affection_diff
+
 # Day and timeslot tracking
 define timeslots = ["dawn", "morning", "afternoon", "afterhours", "night"]
 
@@ -16,21 +18,14 @@ define schedule = ["","",""]
 
 # Free time dialogue tracker
 default freetime_index = {
-    "plant_morning": 0,
-    "plant_afternoon": 0,
-    "plant_afterhours": 0,
-    "fungus_morning": 0,
-    "fungus_afternoon": 0,
-    "fungus_afterhours": 0,
-    "herbivore_morning": 0,
-    "herbivore_afternoon": 0,
-    "herbivore_afterhours": 0,
-    "carnivore_morning": 0,
-    "carnivore_afternoon": 0,
-    "carnivore_afterhours": 0,
+    "plant": 0,
+    "fungus": 0,
+    "herbivore": 0,
+    "carnivore": 0
 }
 
-default last_freetime_girl = None
+
+default last_freetime_girl = None # could be made into list to prevent event girl aswell
 
 # Ending tracker
 default home_early_count = 0 # for bitchless ending
@@ -59,6 +54,7 @@ default celebrate_differences = False
 define locations = ["Classroom", "Library", "Courtyard", "Cafeteria"]
 # empty if in courtyard
 define where_fungus = ["", "classroom", "cafeteria", "library", ""]
+define met_fungus = False
 
 
 
