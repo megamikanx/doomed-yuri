@@ -1,7 +1,3 @@
-
-
-
-
 label intro:
 
     scene bg_courtyard
