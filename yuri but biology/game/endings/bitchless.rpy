@@ -4,6 +4,8 @@ label bitchless_ending:
 
     $ trigger_bitchless_ending = True
 
+    play sound "audio/game_bad_ending.ogg"
+
     scene death_end
 
     player_thoughts "Ah...I see this is what I get for not touching grass..."

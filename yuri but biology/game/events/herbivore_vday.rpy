@@ -1,6 +1,9 @@
 label herbivore_vday:
     scene bg_classroom
 
+    play sound "audio/main_event.ogg"
+
+
     show herbivore neutral with dissolve
     herbivore "Oh, [player_name]-kun!"
     herbivore "What brings you here? I thought everybody was exchanging chocolates on the courtyard."

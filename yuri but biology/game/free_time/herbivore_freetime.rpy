@@ -1,7 +1,7 @@
 
 label free_herbivore_fungushere:
     scene bg_classroom
-
+    play sound "audio/freetime_event.ogg"
     "Both [herbivore] and [fungus] are here. Who do you want to talk to?"
     menu:
         "Both [herbivore] and [fungus] are here. Who do you want to talk to?{fast}"
@@ -20,6 +20,7 @@ label free_herbivore_fungushere:
 
 label free_herbivore0:
     scene bg_classroom
+    play sound "audio/freetime_event.ogg"
 
     if curr_timeslot_idx != 2:
         show herbivore surprise at center with dissolve
@@ -57,6 +58,7 @@ label free_herbivore0:
 
 label free_herbivore1:
     scene bg_classroom
+    play sound "audio/freetime_event.ogg"
 
     show herbivore neutral at center with dissolve
 
@@ -85,7 +87,7 @@ label free_herbivore1:
 
 
 label free_herbivore2:
-
+    play sound "audio/freetime_event.ogg"
     scene bg_classroom
 
     show herbivore neutral at center with dissolve
@@ -119,6 +121,8 @@ label free_herbivore2:
 
 label free_herbivore3:
     scene bg_classroom
+
+    play sound "audio/freetime_event.ogg"
 
     show herbivore neutral at center 
     with dissolve

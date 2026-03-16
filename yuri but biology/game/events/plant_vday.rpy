@@ -1,5 +1,8 @@
 label plant_vday:
     scene bg_library
+
+    play sound "audio/main_event.ogg"
+
     show plant neutral at center
     with dissolve
 

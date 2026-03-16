@@ -4,6 +4,8 @@ label good_ending:
 
     $ trigger_good_ending = True
 
+    play sound "audio/game_good_ending.ogg"
+
     scene bg_sunset
 
     player_thoughts "Ah, I've reached the end of my first week."

@@ -15,7 +15,7 @@ transform slight_surprise:
 
 label free_plant_fungushere:
     scene bg_library
-
+    play sound "audio/freetime_event.ogg"
     "Both [plant] and [fungus] are here. Who do you want to talk to?"
     menu:
         "Both [plant] and [fungus] are here. Who do you want to talk to?{fast}"
@@ -36,7 +36,7 @@ label free_plant_fungushere:
 
 label free_plant0:
     scene bg_library
-
+    play sound "audio/freetime_event.ogg"
     show plant surprise at center
 
     plant "{size=124}a-aah"
@@ -70,7 +70,7 @@ label free_plant0:
 
 label free_plant1:
     scene bg_library
-
+    play sound "audio/freetime_event.ogg"
     if curr_timeslot_idx == 0:
         show plant neutral at center with dissolve
         plant "{cps=10}Rodents and{/cps}{w=0.25}{cps=3}... h{/cps}mm{cps=3}...{/cps}{w=0.1} {cps=30}Garden Bugs with...{w=0.25} no{cps=3}...{/cps}"
@@ -95,7 +95,7 @@ label free_plant1:
 
 label free_plant2:
     scene bg_library
-
+    play sound "audio/freetime_event.ogg"
     if curr_timeslot_idx == 0:
         show plant neutral at center with dissolve
         plant "*sleeping quietly in sun rays*"
@@ -118,7 +118,7 @@ label free_plant2:
 
 label free_plant3:
     scene bg_library
-
+    play sound "audio/freetime_event.ogg"
     show plant neutral with dissolve
     plant "..."
     player_thoughts "Ah, I wonder what she's reading."

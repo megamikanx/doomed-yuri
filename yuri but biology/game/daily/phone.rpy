@@ -23,6 +23,16 @@ define all_phone_text = [
 ]
 
 
+<<<<<<< HEAD
+=======
+screen click_sfx:
+    # left mouse button release
+    key "mouseup_1" action Play("sound", "audio/click.ogg")
+
+image notifaction:
+    "/gui/tile.png"
+
+>>>>>>> 94a054780c8ebf7323ea3b139448f724d8da3044
 screen phone_text_noti:
     modal True
 

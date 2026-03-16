@@ -7,6 +7,9 @@ label plan:
 
     pause
 
+screen click_sfx:
+    # left mouse button release
+    key "mouseup_1" action Play("sound", "audio/click.ogg")
 
 init python:
 

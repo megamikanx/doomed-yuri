@@ -5,14 +5,18 @@ transform shrug:
     ease 0.08 yoffset -4
     ease 0.08 yoffset 0
 
-label event_fungus4:
+label event_fungus:
     if fungus_event_done:
         return
 
     $ fungus_event_done = True
     $ fungus_affection += 1;
 
+    play sound "audio/main_event.ogg"
+
     scene bg_lobby with dissolve
+
+    play sound "audio/time passing.ogg"
 
     play music "audio/crowd.ogg"
 
