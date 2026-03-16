@@ -1,6 +1,8 @@
 label carnivore_vday:
     scene bg_cafeteria
 
+    play sound "audio/main_event.ogg"
+
     show carnivore smug with dissolve
     carnivore "“Well well… So you’re choosing to hang out with ME today."
     carnivore "Well, I guess I’ll allow it… hehe…"

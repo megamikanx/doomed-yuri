@@ -8,11 +8,13 @@ screen eating_caption(msg):
 
         text msg size 36 color "#fff"
 
-label event_plant2:
+label event_plant:
     if plant_event_done:
         return
 
     $ plant_event_done = True
+
+    play sound "audio/main_event.ogg"
 
     scene bg_library with dissolve
 

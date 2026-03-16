@@ -1,5 +1,8 @@
 label fungus_vday:
     scene bg_courtyard
+
+    play sound "audio/main_event.ogg"
+    
     show fungus neutral at center
     with dissolve
 

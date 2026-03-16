@@ -4,11 +4,13 @@ transform silhouette:
 transform normal_look:
     matrixcolor None
 
-label event_herbivore3:
+label event_herbivore:
     if herbivore_event_done:
         return
 
     $ herbivore_event_done = True
+
+    play sound "audio/main_event.ogg"
 
     scene bg_classroom with dissolve
 

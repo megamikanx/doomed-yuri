@@ -8,30 +8,36 @@ label free_fungus_nothere:
 
 label free_fungus0:
     scene bg_courtyard
+
+    play sound "audio/freetime_event.ogg"
+
+    player_thoughts "Funny seeing Fungus-chan here...she's got something in her hand."
+    player_thoughts "Is that...an orange? Maybe a mandarin...?"
+
     show fungus neutral at center
     with dissolve
-    
-    fungus "damn ditching first week in is crazy"
-    player_thoughts "Looks like this spot is taken...what do I say?"
+
+    fungus "sheng ri kuai le"
 
     menu:
-        "Says the underage nicotine addict.":
-            $ fungus_affection += 1
-            show fungus smile at center
-            fungus "clocked...wanna sit?"
+        "Sorry, I don't speak Mandarin.":
+            $ fungus_affection += 2
+            show fungus happy with dissolve
+            fungus "FINALLY someone who gets it. Plant-chan got offended last time."
 
-            player_thoughts "I spent some time with Fungus-chan. She's pretty cool."
+            player_thoughts "I guess her culture is not our costume..."
 
-        "Huh? I was only here to take the trash out.":
-            show fungus smug 
-            fungus "sure whatever u say boss🫡"
+        "What?":
+            show fungus angry with dissolve 
+            fungus "nvm. seeya."
 
-            player_thoughts "I should hurry back. My classmates are waiting."
-
+            player_thoughts "Oh...she was having a mandarin...and speaking Mandarin...very punny."
+    
     jump plan
 
 label free_fungus1:
     scene bg_courtyard
+    play sound "audio/freetime_event.ogg"
     player_thoughts "Can't believe I overslept on the first week...wait...is that Fungus-chan?"
     player_thoughts "What's that in her mouth? Green...toast...?"
 
@@ -56,7 +62,7 @@ label free_fungus1:
 
 label free_fungus2:
     scene bg_courtyard
-
+    play sound "audio/freetime_event.ogg"
     show fungus neutral at center 
     with dissolve
     fungus "~🎵🎵🎵"
@@ -91,7 +97,7 @@ label free_fungus2:
 
 label free_fungus3:
     scene bg_courtyard
-
+    play sound "audio/freetime_event.ogg"
     show fungus neutral at center
     with dissolve
     fungus "meow"
@@ -109,31 +115,7 @@ label free_fungus3:
 
     jump plan
 
-label free_fungus4:
-    scene bg_courtyard
-    player_thoughts "Funny seeing Fungus-chan here...she's got something in her hand."
-    player_thoughts "Is that...an orange? Maybe a mandarin...?"
 
-    show fungus neutral at center
-    with dissolve
-
-    fungus "sheng ri kuai le"
-
-    menu:
-        "Sorry, I don't speak Mandarin.":
-            $ fungus_affection += 2
-            show fungus happy with dissolve
-            fungus "FINALLY someone who gets it. Plant-chan got offended last time."
-
-            player_thoughts "I guess her culture is not our costume..."
-
-        "What?":
-            show fungus angry with dissolve 
-            fungus "nvm. seeya."
-
-            player_thoughts "Oh...she was having a mandarin...and speaking Mandarin...very punny."
-    
-    jump plan
 
 
     

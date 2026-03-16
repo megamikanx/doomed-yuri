@@ -12,6 +12,8 @@ transform surprise_shake:
 label free_carnivore_fungushere:
     scene bg_cafeteria
 
+    play sound "audio/freetime_event.ogg"
+
     "Both [carnivore] and [fungus] are here. Who do you want to talk to?"
     menu:
         "Both [carnivore] and [fungus] are here. Who do you want to talk to?{fast}"
@@ -29,7 +31,7 @@ label free_carnivore_fungushere:
 
 label free_carnivore0:
     scene bg_cafeteria
-
+    play sound "audio/freetime_event.ogg"
     show carnivore neutral at center
     with dissolve
     carnivore "Well look who's here."
@@ -58,6 +60,7 @@ label free_carnivore0:
 
 label free_carnivore1:
     scene bg_cafeteria
+    play sound "audio/freetime_event.ogg"
     show carnivore angry with dissolve
 
     carnivore "{size=+12}ARE YOU KIDDING ME?{/size}"
@@ -88,7 +91,7 @@ label free_carnivore1:
 
 label free_carnivore2:
     scene bg_cafeteria
-
+    play sound "audio/freetime_event.ogg"
     show carnivore neutral at center
     with dissolve
     carnivore "Oi oi oi! It seems you can’t get enough of me underling!"
@@ -121,7 +124,7 @@ label free_carnivore2:
 
 label free_carnivore3:
     scene bg_cafeteria
-
+    play sound "audio/freetime_event.ogg"
     show carnivore happy at center
     with dissolve
     carnivore "OI OI!!!!"

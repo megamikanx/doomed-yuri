@@ -6,6 +6,8 @@ label event_carnivore1:
 
     scene bg_cafeteria with dissolve
 
+    play sound "audio/main_event.ogg"
+
     show carnivore neutral at center with dissolve
 
     carnivore "Oh, look who decided to show up."

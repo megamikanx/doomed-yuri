@@ -6,6 +6,8 @@ label bitchless_ending:
 
     scene death_end
 
+    play sound "audio/game_good_ending.ogg"
+
     player_thoughts "Ah...I see this is what I get for not touching grass..."
     player_thoughts "Would Herbivore-chan have been there if I visited the classroom...?"
     player_thoughts "Or Carnivore-chan...she was always munching away in the cafeteria..."
