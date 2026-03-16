@@ -1,4 +1,4 @@
-label fungus_vday:
+label plant_vday:
     scene bg_library
     show plant neutral at center
     with dissolve

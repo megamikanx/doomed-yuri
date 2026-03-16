@@ -4,6 +4,16 @@
 screen map:
     modal True
 
+    if store.curr_timeslot_idx == 0:
+        image "/images/timers/morning"+str(day)+".png":
+            align(0.5, 0.5)
+    if store.curr_timeslot_idx == 1:
+        image "/images/timers/afternoon"+str(day)+".png":
+            align(0.5, 0.5)
+    if store.curr_timeslot_idx == 2:
+        image "/images/timers/afterhours"+str(day)+".png":
+            align(0.5, 0.5)
+
 
     imagebutton:
         idle "/gui/map_transparent_tile_lib.png"
