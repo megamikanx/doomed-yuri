@@ -48,9 +48,12 @@ screen map:
         action [Hide("map"), Function(call_event, "fungus", "courtyard")]
 
 
+image map_bg:
+    "/images/backgrounds/bg_map"+str(curr_timeslot_idx)+".png"
+
 label map:
 
-    scene bg_map:
+    scene map_bg:
         anchor(0.5,0.5) pos(960,510) zoom 0.85
 
     #creates buttons for map

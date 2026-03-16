@@ -23,26 +23,20 @@ define all_phone_text = [
 ]
 
 
-<<<<<<< HEAD
-=======
 screen click_sfx:
     # left mouse button release
     key "mouseup_1" action Play("sound", "audio/click.ogg")
 
-image notifaction:
-    "/gui/tile.png"
-
->>>>>>> 94a054780c8ebf7323ea3b139448f724d8da3044
 screen phone_text_noti:
     modal True
 
     image "/images/backgrounds/bg_phone_texts.png"
 
     imagebutton:
-        xpos 100
-        ypos 100
-        idle "/gui/back.png"
-        at Transform(xzoom = -1.0)
+        xpos 1080
+        ypos 775
+        idle "/gui/arrow.png"
+        at Transform(xzoom = 1.0, rotate=3)
 
         action [Hide("phone_text_noti"), Show("phone_timezone")]
 
@@ -101,9 +95,10 @@ screen phone_text:
     image "/images/backgrounds/messages"+str(who_texted)+".png"
 
     imagebutton:
-        xpos 100
-        ypos 100
-        idle "/gui/back.png"
+        xpos 1080
+        ypos 775
+        idle "/gui/arrow.png"
+        at Transform(xzoom = -1.0, rotate=3)
 
         action [Hide("phone_text"), Show("phone_text_noti")]
     
@@ -138,9 +133,10 @@ screen phone_timezone:
 
     if day != 1:
         imagebutton:
-            xpos 100
-            ypos 100
-            idle "/gui/back.png"
+            xpos 580
+            ypos 200
+            idle "/gui/arrow.png"
+            at Transform(xzoom = -1.0, rotate=3)
 
             action [Hide("phone_timezone"), Show("phone_text_noti")]
 
@@ -220,9 +216,10 @@ screen phone_timezone:
     
 
     imagebutton:
-        xpos 100
-        ypos 800
-        idle "/gui/back.png"
+        xpos 1080
+        ypos 900
+        idle "/gui/arrow.png"
+        at Transform(xzoom = 1.0, rotate=3)
 
         action [Hide("phone_timezone"), Function(start_day), Jump("plan")]
 
