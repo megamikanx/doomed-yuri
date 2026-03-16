@@ -4,7 +4,7 @@ transform silhouette:
 transform normal_look:
     matrixcolor None
 
-label event_herbivore:
+label event_herbivore3:
     if herbivore_event_done:
         return
 

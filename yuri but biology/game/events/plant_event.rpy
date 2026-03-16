@@ -8,7 +8,7 @@ screen eating_caption(msg):
 
         text msg size 36 color "#fff"
 
-label event_plant:
+label event_plant2:
     if plant_event_done:
         return
 

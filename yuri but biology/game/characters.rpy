@@ -13,8 +13,8 @@ define fungus = "{color=#845d8f}Fungus-chan{/color}"
 
 # Heroines
 define mystery = Character("???", kind = base_char)
-define carnivore = Character(carnivore, color = "#db3a1a", image = "carnivore_default", kind = base_char)
-define herbivore = Character(herbivore, color = "#f06ec0", image = "herbivore_default", kind = base_char)
+define carnivore = Character(carnivore, color = "#db3a1a", image = "carnivore", kind = base_char)
+define herbivore = Character(herbivore, color = "#f06ec0", image = "herbivore", kind = base_char)
 define plant = Character(plant, color = "#1c9e21", image = "plant_default", kind = base_char)
 define fungus = Character(fungus, color = "#845d8f", image = "fungus_default", kind = base_char, what_prefix="{cps=15}", what_suffix="{/cps}")
 
