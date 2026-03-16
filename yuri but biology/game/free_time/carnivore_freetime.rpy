@@ -75,13 +75,13 @@ label free_carnivore1:
         "Too slow! What can you say, she was faster.":
             carnivore "Huh?! You're siding with her too?!"
             carnivore "Watch your back..."
-            player_thought "I should really get going..."
+            player_thoughts "I should really get going..."
 
         "Yeah, stand up for your rights.":
             $ carnivore_affection += 2
             show carnivore smug with dissolve
             carnivore "Totally. Gotta show them who's boss!"
-            player_thought "But does it really matter that much...?"
+            player_thoughts "But does it really matter that much...?"
 
 
     jump plan

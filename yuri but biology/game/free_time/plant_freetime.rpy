@@ -121,16 +121,16 @@ label free_plant3:
 
     show plant neutral with dissolve
     plant "..."
-    player_thought "Ah, I wonder what she's reading."
-    player_thought "I don't think she can hear me...let me just take a peak."
+    player_thoughts "Ah, I wonder what she's reading."
+    player_thoughts "I don't think she can hear me...let me just take a peak."
 
     show layer master at walk_forward_shake
     $ renpy.pause(0.8)
 
     show layer master
 
-    player_thought "What's the title..."
-    player_thought "The 12-Tentacled Kraken and Bang Bang Paradise...?"
+    player_thoughts "What's the title..."
+    player_thoughts "The 12-Tentacled Kraken and Bang Bang Paradise...?"
 
     menu:
         "Whatcha got there?":
@@ -139,7 +139,7 @@ label free_plant3:
             plant "I...I didn't think you're in the library at this time..."
             show plant megablush with dissolve
             plant "U-uhm...don't worry about it!"
-            player_thought "Should I have not looked...?"
+            player_thoughts "Should I have not looked...?"
         
         "I like the part where he grows another tentacle.":
             $ plant_affection += 1
@@ -153,7 +153,7 @@ label free_plant3:
             show plant shy with dissolve
             plant "W-w-we should talk about it in depth s-sometime...!"
 
-            player_thought "It used to be my favorite series in middle schoool...didn't know people still read the manga."
+            player_thoughts "It used to be my favorite series in middle schoool...didn't know people still read the manga."
 
     jump plan
 
