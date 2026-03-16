@@ -36,7 +36,7 @@ default last_freetime_girl = None
 default home_early_count = 0 # for bitchless ending
 
 default trigger_bitchless_ending = False
-default trigger_bad_ending = False # for bad endings
+default trigger_world_end_ending = False # for bad endings
 default trigger_good_ending = False
 default trigger_best_ending = False
 
