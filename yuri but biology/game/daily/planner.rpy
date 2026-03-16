@@ -3,7 +3,6 @@
 # dont need if this label is needed could be conslidated
 
 label plan:
-    "accessed plan"
     $ go_next()
 
     pause

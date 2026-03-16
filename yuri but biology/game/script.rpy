@@ -1,5 +1,5 @@
 
 label start:
-    call map
+    call intro
     "Event finished."
     return

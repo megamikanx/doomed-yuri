@@ -45,7 +45,7 @@ label free_carnivore0:
 
         "I've got leftover canned tuna from earlier...":
             $ carnivore_affection += 2
-            show carnivore smug with surprise_shake
+            show carnivore smug at surprise_shake
             carnivore "TUNA?!"
             carnivore "ONE CAN OF TUNA, 20 GRAMS OF PROTEIN!"
 
