@@ -4,39 +4,54 @@
 screen map:
     modal True
 
+    if store.curr_timeslot_idx == 0:
+        image "/images/timers/morning"+str(day)+".png":
+            align(0.5, 0.5)
+    if store.curr_timeslot_idx == 1:
+        image "/images/timers/afternoon"+str(day)+".png":
+            align(0.5, 0.5)
+    if store.curr_timeslot_idx == 2:
+        image "/images/timers/afterhours"+str(day)+".png":
+            align(0.5, 0.5)
+
 
     imagebutton:
-        idle "/gui/player.png" # placeholder transparent image
-        hover "/gui/tile.png"
-        xpos 100 ypos 100
-        at Transform(rotate= -15)
+        idle "/gui/map_transparent_tile_lib.png"
+        hover "/gui/map_transparent_tile_lib_black.png"
+        anchor(0.5,0.5)
+        xpos 650 ypos 460
+        at Transform(rotate= -28, alpha=0.25)
         action [Hide("map"), Function(call_event, "plant", "library")]
 
     imagebutton:
-        idle "/gui/player.png" # placeholder transparent image
-        hover "/gui/tile.png"
-        xpos 800 ypos 800
-        at Transform(rotate= -15)
-        action [Hide("map"), Function(call_event, "fungus", "courtyard")]
+        idle "/gui/map_transparent_tile_class.png"
+        hover "/gui/map_transparent_tile_class_black.png"
+        anchor(0.5,0.5)
+        xpos 1160 ypos 440
+        at Transform(rotate= 29, alpha=0.25)
+        action [Hide("map"), Function(call_event, "herbivore", "classroom")]
 
     imagebutton:
-        idle "/gui/player.png" # placeholder transparent image
-        hover "/gui/tile.png"
-        xpos 800 ypos 100
-        at Transform(rotate= 15)
-        action [Hide("map"), Function(call_event, "herbivore","classroom")]
-
-    imagebutton:
-        idle "/gui/player.png" # placeholder transparent image
-        hover "/gui/tile.png"
-        xpos 100 ypos 800
-        at Transform(rotate= 15)
+        idle "/gui/map_transparent_tile_cafe.png"
+        hover "/gui/map_transparent_tile_cafe_black.png"
+        anchor(0.5,0.5)
+        xpos 650 ypos 775
+        at Transform(rotate= 29, alpha=0.25)
         action [Hide("map"), Function(call_event, "carnivore", "cafeteria")]
+
+    imagebutton:
+        idle "/gui/map_transparent_tile_court.png"
+        hover "/gui/map_transparent_tile_court_black.png"
+        anchor(0.5,0.5)
+        xpos 1150 ypos 800
+        at Transform(rotate= -28, alpha=0.25)
+        action [Hide("map"), Function(call_event, "fungus", "courtyard")]
 
 
 label map:
 
-    scene bg_static
+    scene bg_map:
+        anchor(0.5,0.5) pos(960,510) zoom 0.85
 
     #creates buttons for map
     show screen map
