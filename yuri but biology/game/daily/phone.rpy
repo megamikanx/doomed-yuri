@@ -174,7 +174,6 @@ screen phone_text:
     text phone_text:
         yanchor(1.0) color "#ffffff" xpos 1010 ypos 800 size 24
 
-
 label phone:
 
     scene iphone_tempremove:

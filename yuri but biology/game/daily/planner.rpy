@@ -16,6 +16,13 @@ init python:
 
         if store.curr_timeslot_idx == 3:
             store.day += 1
+            if are_you_bitchless():
+                return
+
+            if store.day == 6:
+                end_game()
+                return
+
             store.curr_timeslot_idx = -1
             store.schedule = ["","",""]
             store.meet_fungus = False
@@ -33,5 +40,21 @@ init python:
         
         #otherwise choose from map
         renpy.jump("map")
+
+    def are_you_bitchless():
+        all_affection = [carnivore_affection, herbivore_affection, plant_affection, fungus_affection]
+        # need to be filled
+        return false
+        
+
+    def end_game_natural():
+        all_affection = [carnivore_affection, herbivore_affection, plant_affection, fungus_affection]
+        
+        #if max and min affection levels are too different get respective ending
+        if (max(all_affection) - min(all_affection)) > max_affection_diff:
+            renpy.jump("world_end_ending")
+        else:
+            renpy.jump(good_ending)
+        
         
 
