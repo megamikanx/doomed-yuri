@@ -29,14 +29,14 @@ init python:
         store.curr_timeslot_idx += 1
 
         # end of day
-        if store.curr_timeslot_idx == 3:
+        if store.curr_timeslot_idx >= 3:
             store.day += 1
 
             if are_you_bitchless():
                 renpy.jump("bitchless_ending")
                 return
 
-            if store.day == 7:         
+            if store.day > 5:         
                 end_game()
                 return
 
@@ -50,7 +50,11 @@ init python:
         # ── scheduled event for this slot ───────────────────
         name = store.schedule[store.curr_timeslot_idx]
         if name:
-            renpy.jump("event_" + name + str(store.day))
+            if day == 5:
+                print("adasdsa")
+                renpy.jump(name + "_vday")
+                return
+            renpy.jump("event_" + name)
             return
 
         # ── free slot: show title card then map ─────────────

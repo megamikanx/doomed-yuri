@@ -32,6 +32,8 @@ label carnivore_vday:
 
             player_thoughts "What did I do this time..."
 
+    $store.curr_timeslot_idx = 6
+    jump plan
     return
 
 

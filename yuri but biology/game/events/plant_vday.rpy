@@ -6,7 +6,7 @@ label plant_vday:
     show plant neutral at center
     with dissolve
 
-    plant "H-hey (name)-kun… How c-come you’re here?"
+    plant "H-hey [player]-kun… How c-come you’re here?"
     plant "S-surely...y-you know what day today is right… (,,>﹏<,,)"
 
     menu:
@@ -27,5 +27,6 @@ label plant_vday:
             plant "I guess he doesn't care..."
 
             player_thoughts "What? Did I forget to cross Thursday off my calendar..."
-
+    $store.curr_timeslot_idx = 6
+    jump plan
     return

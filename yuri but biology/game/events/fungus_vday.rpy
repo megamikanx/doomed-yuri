@@ -31,6 +31,8 @@ label fungus_vday:
 
             player_thoughts "What? I thought she'd be more in the spirit."
 
+    $store.curr_timeslot_idx = 6
+    jump plan
     return
 
 

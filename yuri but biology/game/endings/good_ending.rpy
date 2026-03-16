@@ -13,7 +13,7 @@ label good_ending:
 
     show herbivore happy at center 
     with dissolve
-    herbivore "[player-name]-kun! You made it through!"
+    herbivore "You made it through!"
     
     show herbivore shy at center
     with dissolve
@@ -38,7 +38,7 @@ label good_ending:
 
     show plant neutral at center
     with dissolve
-    plant "[player_name]-kun (,; ⩌ ;,)"
+    plant "(,; ⩌ ;,)"
     plant "I-I hope y-you had a great f-f-first w-week...!"
     show plant 4eyes shy at center
     with dissolve

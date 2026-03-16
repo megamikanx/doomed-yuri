@@ -37,4 +37,6 @@ label herbivore_vday:
 
             player_thoughts "Someone needs to clock her..."
 
+    $store.curr_timeslot_idx = 6
+    jump plan
     return
