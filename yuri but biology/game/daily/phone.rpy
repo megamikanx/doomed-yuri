@@ -23,6 +23,10 @@ define all_phone_text = [
 ]
 
 
+screen click_sfx:
+    # left mouse button release
+    key "mouseup_1" action Play("sound", "audio/click.ogg")
+
 image notifaction:
     "/gui/tile.png"
 

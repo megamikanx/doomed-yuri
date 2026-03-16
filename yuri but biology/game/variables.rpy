@@ -15,7 +15,7 @@ define timeslots = ["dawn", "morning", "afternoon", "afterhours", "night"]
 
 default day = 1
 default curr_timeslot_idx = -1
-define schedule = ["","",""]
+define schedule = ["","",""] # indices 0=morning 1=afternoon 2=after-hours
 
 # Free time dialogue tracker
 default freetime_index = {
@@ -56,6 +56,10 @@ define locations = ["Classroom", "Library", "Courtyard", "Cafeteria"]
 # empty if in courtyard
 define where_fungus = ["", "classroom", "cafeteria", "library", ""]
 define met_fungus = False
+
+default phone_text = ""
+default height_text = 0
+
 
 
 
