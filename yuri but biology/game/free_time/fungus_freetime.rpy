@@ -1,7 +1,8 @@
 
 
 label free_fungus_nothere:
-    fungus "not"
+    "{cps=3}. . . .{/cps}"
+    "no one is here"
     jump plan
 
 

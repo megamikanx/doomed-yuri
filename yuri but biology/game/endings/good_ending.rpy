@@ -61,3 +61,5 @@ label good_ending:
     player_thoughts "Yeah...I think this is the start of a great school year."
 
     with dissolve
+
+    return

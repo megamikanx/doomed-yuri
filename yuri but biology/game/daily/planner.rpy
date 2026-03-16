@@ -54,7 +54,7 @@ init python:
         if (max(all_affection) - min(all_affection)) > max_affection_diff:
             renpy.jump("world_end_ending")
         else:
-            renpy.jump(good_ending)
+            renpy.jump("good_ending")
         
         
 

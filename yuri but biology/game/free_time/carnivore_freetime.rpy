@@ -7,14 +7,14 @@ label free_carnivore_fungushere:
         "Both [carnivore] and [fungus] are here. Who do you want to talk to?{fast}"
         "[carnivore]":
             $ store.last_freetime_girl = "herbivore"
-            $ freetime_index["carnivore"+"_"+timeslots[store.curr_timeslot_idx + 1]] += 1
-            $ renpy.jump("free_carnivore"+ str(freetime_index["carnivore"+"_"+timeslots[store.curr_timeslot_idx + 1]] - 1))
+            $ freetime_index["carnivore"] += 1
+            $ renpy.jump("free_carnivore"+ str(freetime_index["carnivore"] - 1))
 
         "[fungus]":
             $ meet_fungus = True
             $ store.last_freetime_girl = "fungus"
-            $ freetime_index["fungus"+"_"+timeslots[store.curr_timeslot_idx + 1]] += 1
-            $ renpy.jump("free_fungus"+str(freetime_index["fungus"+"_"+timeslots[store.curr_timeslot_idx + 1]] - 1))
+            $ freetime_index["fungus"] += 1
+            $ renpy.jump("free_fungus"+str(freetime_index["fungus"] - 1))
 
 
 label free_carnivore0:

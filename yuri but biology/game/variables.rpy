@@ -18,18 +18,10 @@ define schedule = ["","",""]
 
 # Free time dialogue tracker
 default freetime_index = {
-    "plant_morning": 0,
-    "plant_afternoon": 0,
-    "plant_afterhours": 0,
-    "fungus_morning": 0,
-    "fungus_afternoon": 0,
-    "fungus_afterhours": 0,
-    "herbivore_morning": 0,
-    "herbivore_afternoon": 0,
-    "herbivore_afterhours": 0,
-    "carnivore_morning": 0,
-    "carnivore_afternoon": 0,
-    "carnivore_afterhours": 0,
+    "plant": 0,
+    "fungus": 0,
+    "herbivore": 0,
+    "carnivore": 0
 }
 
 
@@ -62,7 +54,7 @@ default celebrate_differences = False
 define locations = ["Classroom", "Library", "Courtyard", "Cafeteria"]
 # empty if in courtyard
 define where_fungus = ["", "classroom", "cafeteria", "library", ""]
-define meet_fungus = False
+define met_fungus = False
 
 
 
