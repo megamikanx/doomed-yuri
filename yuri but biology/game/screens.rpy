@@ -293,13 +293,13 @@ screen navigation():
         vbox:
             imagebutton:
                 idle "/gui/start_button.png"
-                hover "/gui/start_button.png"
+                hover "/gui/start_button_dimmed.png"
                 action Start()
                 ypos 705
                 xpos 45
             imagebutton:
                 idle "/gui/quit_button.png"
-                hover "/gui/quit_button.png" at Transform(matrixcolor=TintMatrix("#000000"))
+                hover "/gui/quit_button_dimmed.png"
                 action Quit(confirm=not main_menu)
                 ypos 750
                 xpos 45
